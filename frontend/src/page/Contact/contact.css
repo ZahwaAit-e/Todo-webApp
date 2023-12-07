@@ -1,0 +1,27 @@
+.container-contact-form {
+  max-width: 390px;
+  margin: 50px auto;
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: gray;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  color: darkmagenta;
+  font-size: 50px;
+  font-weight: 700;
+}
+.text-contact-title {
+  margin-top: 50px;
+}
+.message-area textarea {
+  width: 340px;
+  height: 150px;
+  border-radius: 15px;
+}

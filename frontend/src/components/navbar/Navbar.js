@@ -5,7 +5,6 @@ import { Link, NavLink } from "react-router-dom";
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  
 
   return (
     <nav>
@@ -14,28 +13,29 @@ export const Navbar = () => {
           <img src="/assets/LOGO3.png" alt="" className="topbarImg" />
         </Link>
       </div>
-    
+
       <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>
         <span></span>
         <span></span>
         <span></span>
       </div>
-      <ul >
+      <ul>
         <li>
-          <NavLink to="/Home">About</NavLink>
+          <NavLink to="/Home">Home</NavLink>
         </li>
         <li>
-          <NavLink to="/tasks">Services</NavLink>
+          <NavLink to="/tasks">Tasks</NavLink>
         </li>
         <li>
-          <NavLink to="/login">Contact</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
         </li>
         <li>
-          <NavLink to="/signup">signup</NavLink>
+          <NavLink to="/login">Login</NavLink>
+        </li>
+        <li>
+          <NavLink to="/signup">Sign Up</NavLink>
         </li>
       </ul>
-  
-      
     </nav>
   );
 };

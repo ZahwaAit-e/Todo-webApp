@@ -43,7 +43,7 @@ input {
   width: 100%;
   padding: 1.3em;
   font-size: 12px;
-  text-transform: uppercase;
+
   letter-spacing: 2.5px;
   font-weight: 500;
   color: #000;
@@ -117,24 +117,22 @@ a:hover {
 .password-input span svg {
   font-size: 1.2rem;
   color: #888;
-   margin-top: 20px;
-   background-color: none;
+  margin-top: 20px;
+  background-color: none;
 }
 
 /* Add styling for eye icon when password is visible */
 .password-input span.activ svg {
-    color: #6e1c1c;
+  color: #6e1c1c;
 }
 /* Example with higher specificity */
 
 .confirm-password-input span svg {
   font-size: 1.2rem;
   color: #888;
-   margin-top: 20px;
-   background-color: none;
+  margin-top: 20px;
+  background-color: none;
 }
 .confirm-password-input span.activ svg {
   color: #6e1c1c;
 }
-
-
