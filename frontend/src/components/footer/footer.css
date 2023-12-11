@@ -1,0 +1,46 @@
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 30vh; /* Adjusted height to 10% of the viewport height */
+  margin-top: 200px; /* Adjusted top margin */
+
+  bottom: 0;
+  width: 100%;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+.social-links a:hover {
+  color: #ad379b; /* Change the color on hover to your desired color */
+}
+
+.social-links img {
+  width: 70px; /* Adjust the size of your social icons */
+  height: auto;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+
+  margin-top: 50px;
+  display: flex;
+}
+/* Additional hover effect for the icon container */
+.icon:hover {
+  transform: scale(1.2); /* Scale the icon container on hover */
+}

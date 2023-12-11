@@ -12,7 +12,7 @@ router.post("/register", async (req, res) => {
     const existingUser = await User.findOne({ email });
 
     if (existingUser) {
-      res.status(400).json({ message: "User already exists" });
+      res.status(200).json({ message: "User already exists" });
       return; // Prevent further processing
     }
 
@@ -29,34 +29,35 @@ router.post("/register", async (req, res) => {
 
     await user.save();
 
-    res.status(200).json({ user: user });
+    res.status(200).json({ message: "signup successeful" });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: "Internal server error" });
+    res.status(400).json({ message: "Internal server error" });
   }
 });
 //login
 router.post("/login", async (req, res) => {
-    try {
-      const user = await User.findOne({ email: req.body.email });
-      if (!user) {
-        res.status(400).json({ message: "Sign up to access Tasky" });
-      }
-  
-      
-      const isPasswordCorrect = bcrypt.compareSync(req.body.password, user.password);
-  
-      if (!isPasswordCorrect) {
-        res.status(400).json({ message: "Wrong password" });
-      }
-  
-      const { password, ...others } = user._doc; // Destructure the user object
-      res.status(200).json({ others }); // Send the user data without the password
-    } catch (error) {
-      console.error(error);
-      res.status(400).json({ message: "user exists" });
+  try {
+    const user = await User.findOne({ email: req.body.email });
+    if (!user) {
+      res.status(200).json({ message: "Sign up to access to Harmony" });
     }
-  });
-  
+
+    const isPasswordCorrect = bcrypt.compareSync(
+      req.body.password,
+      user.password
+    );
+
+    if (!isPasswordCorrect) {
+      res.status(200).json({ message: "Wrong password" });
+    }
+
+    const { password, ...others } = user._doc; // Destructure the user object
+    res.status(200).json({ user: others }); // Send the user data without the password
+  } catch (error) {
+    console.error(error);
+    res.status(200).json({ message: "user exists" });
+  }
+});
 
 module.exports = router;
