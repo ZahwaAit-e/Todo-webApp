@@ -4,26 +4,17 @@ const listsch = new mongoose.Schema({
         type: String,
         required: true,
     },
-    descreption: {
-        type: String,
+
+    start: {
+        type: Date,
         required: true,
     },
-    week: {
-        type: Number,
+    end: {
+        type: Date,
         required: true,
     },
-    date: {
-        type: String,
-        required: true,
-    },
-    time: {
-        type: String,
-        required: true,
-    },
-    mrdetails: {
-        type: String,
-        required: false,
-    },
+    
+    
     user:[
         {
             type: mongoose.Types.ObjectId,

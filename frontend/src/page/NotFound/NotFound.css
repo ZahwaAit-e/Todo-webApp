@@ -1,8 +1,33 @@
+.not-Found {
+  display: block;
+  flex-direction: column;
+}
+
+.error-page H1 {
+  display: flex;
+  justify-content: center;
+  font-size: 200px;
+  margin-top: 40px;
+}
+
+.sorry-text {
+  margin-top: 70px;
+}
+.sorry-text p {
+  font-size: 40px;
+}
+
 .linkk {
   font-style: none;
-  font: none;
+  text-decoration-line: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
+  font-size: 20px;
   content: none;
-  color: rgb(212, 136, 22);
-
-
+  color: #ad379b;
+}
+.linkk:hover {
+  text-decoration: none;
+  color: gray;
 }

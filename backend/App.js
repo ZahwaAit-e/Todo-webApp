@@ -2,6 +2,16 @@ const express = require("express");
 const cors = require("cors");
 
 const app = express();
+
+const corsOptions = {
+  origin: "http://localhost:3000", // Update with your frontend origin
+  credentials: true, // Enable credentials (if needed)
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  optionsSuccessStatus: 204,
+  allowedHeaders: "Content-Type",
+};
+
+app.use(cors(corsOptions));
 app.use(cors());
 require("./cnx/cnx");
 
@@ -17,6 +27,6 @@ app.use("/api/v1", auth);
 app.use("/api/v2", list);
 // Use the contact route
 app.use("/api/contact", contactRoutes);
-app.listen(3000, () => {
+app.listen(1000, () => {
   console.log("started");
 });
